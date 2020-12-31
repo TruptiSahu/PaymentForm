@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.modal__container {
+  width: 675px;
+  height: 450px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__featured {
+  position: relative;
+  flex: 1;
+  min-width: 265px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+}
+
+.button--close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: #fbcf34;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.button--close svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: all 0.3s;
+}
+
+.button--close:hover {
+  background: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.button--close:hover svg {
+  fill: #fbcf34;
+}
+
+.modal__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  background-color: #fbcf34;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-25%);
+}
+
+.modal__product {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 85%;
+  transform: translateX(-55%);
+}
+
+.modal__content {
+  flex: 3;
+  padding: 40px 30px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.modal__title {
+  margin-bottom: 15px;
+}
+
+.form-list {
+  list-style: none;
+}
+
+.form-list__row {
+  margin-bottom: 24px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+
+.form-list__row label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #939393;
+}
+
+.form-list__row input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-bottom: 2px solid #f0f0f0;
+  padding: 5px;
+}
+
+.form-list__row input:focus {
+  border-color: #fbcf34;
+}
+
+.form-list__row input:valid {
+  border-color: #24cf5f;
+}
+
+.cc_icon {
+  position: relative;
+  width: 100%;
+}
+
+input[name="cc_number"] {
+  padding: 5px 5px 5px 45px;
+}
+
+.form-list__row .cc_icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background: url(./card.png) no-repeat left center/contain;
+}
+
+.form-list__row--inline {
+  flex-flow: row;
+  position: relative;
+  justify-content: space-between;
+}
+
+.form-list__col {
+  position: relative;
+  width: 60%;
+}
+
+.form-list__col:nth-child(2) {
+  position: relative;
+  width: 30%;
+}
+
+.form-list__input-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-list__input-inline input {
+  width: 45%;
+}
+
+.form-list__input-inline input[name="cc_cvc"] {
+  width: 100%;
+}
+
+.button--info {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.form-list__row-agrees {
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-list__row-agrees input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.form-list__row-agrees label {
+  text-transform: none;
+  font-weight: 400;
+}
+
+.form__btn {
+  font-family: sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 25px;
+  background: #24cf5f;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.form__btn:hover {
+  transform: scale(1.05);
+}
